@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0f0f0f;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+/* Hide/Show helper */
+.hidden {
+  display: none;
+}
+
+/* Center menu & instructions */
+#menu, #instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Play buttons */
+.play-btn {
+  padding: 20px 50px;
+  font-size: 28px;
+  border: none;
+  border-radius: 12px;
+  background: #00ff99;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Creator button bottom-left */
+.creator-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.creator-btn:hover {
+  background: #00ff99;
+  color: black;
+}
+
+/* Game screen */
+#game {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #00ff99;
+}
+
+#timer {
+  font-size: 28px;
+}
+
+.question {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  width: 150px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #00ff99;
+}
+
+/* Falling operators */
+.operator {
+  position: absolute;
+  top: -50px;
+  font-size: 22px;
+  color: rgba(255,255,255,0.1);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}

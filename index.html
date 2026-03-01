@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Math Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Creator button bottom-left -->
+  <button class="creator-btn" onclick="showCreator()">Creator Info - Click Me</button>
+
+  <!-- Main menu -->
+  <div id="menu">
+    <button class="play-btn" onclick="showInstructions()">How to Play</button>
+  </div>
+
+  <!-- Instructions screen -->
+  <div id="instructions" class="hidden">
+    <h2>How to Play</h2>
+    <p>Solve the math question in <b>20 seconds</b>.</p>
+    <p>Questions can have up to <b>6 operators</b> with parentheses.</p>
+    <p>Dark humour compliments will appear after each answer.</p>
+    <p>There are 10 rounds. Try to get the highest intelligence level!</p>
+    <button class="play-btn" onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- Game screen -->
+  <div id="game" class="hidden">
+    <div class="top-bar">
+      <span>Level: <span id="level">1</span></span>
+      <span>Time: <span id="timer">20</span></span>
+    </div>
+
+    <div class="question" id="question"></div>
+
+    <input type="number" id="answer" placeholder="Your answer">
+    <button onclick="checkAnswer()">Submit</button>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
